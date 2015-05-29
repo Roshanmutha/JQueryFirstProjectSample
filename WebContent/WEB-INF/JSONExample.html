@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-1.11.3.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+$(document).ready(function(){
+	var josnExample= {"roshan":{"name":"roshan", "Job":"Software Engg"},"Gauri":{"name":"Gauri", "Job":"QA Engg"}};
+	//alert(josnExample.roshan.Job);
+	//var result=josnExample.roshan.Job;
+	//$('#Divresults').html(result);
+	//alert(josnExample.12631.name)
+	
+	
+	//var jsonstring=JSON.stringify(josnExample);
+	//$('#Divresults').html(jsonstring);
+
+	var jsonstring=JSON.stringify(josnExample);
+	var jsonArray=JSON.parse(jsonstring);
+	var empnames="";
+	 $.each(jsonArray,function(i, item){
+		empnames+=item.name+", ";
+	}); 
+
+	/* jsonArray.each(function (index){
+		empnames+=this.name+", ";
+	});
+ */
+	
+	$('#Divresults').html(empnames);
+	
+}); 
+</script>
+	<div id="Divresults">Test</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.js"></script>
+<script>
+  window.jQuery || document.write("<script  src='jquery-2.1.4.js'><\/script>")
+</script>
+</head>
+<body>
+	<script type="text/javascript">
+$(document).ready(function(){
+	$(this).on('contextmenu', function(event){
+		event.preventDefault(); // prevents default the action context menu right click disabled
+		$('#divResult').append("Right Clik disabled<br>")
+		});
+}) ; 
+</script>
+	<h3>Right click here.</h3>
+
+	<div id="divResult"></div>
+</body>
+</html>

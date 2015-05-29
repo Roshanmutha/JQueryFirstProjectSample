@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.js"></script>
+<script>
+  window.jQuery || document.write("<script  src='jquery-2.1.4.js'><\/script>")
+</script>
+</head>
+<body>
+	<script type="text/javascript">
+$(document).ready(function(){
+
+	$('.target').change(function (){
+			alert($(this).val())
+	});
+
+
+	
+	
+}) ; 
+</script>
+	<form>
+		<input class="target" type="text" value="Field 1">
+		 <select
+			class="target">
+			<option value="option1" selected="selected">Option 1</option>
+			<option value="option2">Option 2</option>
+		</select>
+	</form>
+
+
+	<div>Status</div>
+</body>
+</html>

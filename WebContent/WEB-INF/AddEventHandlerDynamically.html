@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.js"></script>
+<script>
+  window.jQuery || document.write("<script  src='jquery-2.1.4.js'><\/script>")
+</script>
+</head>
+<body>
+	<script type="text/javascript">
+$(document).ready(function(){
+
+$('ul').on("click",'li', function(){
+
+	$(this).fadeOut(500);
+
+});
+	
+$("#myButton").on("click", function(){
+
+	$('ul').append("<li>new Element added</li>");
+});
+		
+}) ; 
+</script>
+	<input type="button" name="myButton" id="myButton" value="Click me " />
+	<ul>
+		<li>Element added</li>
+		<li>Element added</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.js"></script>
+<script>
+  window.jQuery || document.write("<script  src='jquery-2.1.4.js'><\/script>")
+</script>
+</head>
+<body>
+	<script type="text/javascript">
+$(document).ready(function(){
+//1.7 and before Need jquery-1.7.js
+$('li').live('click', function(){
+
+	$(this).fadeOut(500);
+
+});
+	
+$("#myButton").on("click", function(){
+
+	$('ul').append("<li>new Element added</li>");
+});
+
+$("#StopDelegate").on("click", function(){
+
+	//$('ul').off('click', 'li');
+	$('li').die('click');
+});
+		
+}) ; 
+</script>
+	<input type="button" name="myButton" id="myButton" value="Click me " /><input type="button" name="myButton1" id="StopDelegate" value="Click me " />
+	<ul>
+		<li>Element added</li>
+		<li>Element added</li>
+	</ul>
+</body>
+</html>

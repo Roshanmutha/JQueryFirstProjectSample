@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.js"></script>
+<script>
+  window.jQuery || document.write("<script  src='jquery-2.1.4.js'><\/script>")
+</script>
+</head>
+<body>
+	<script type="text/javascript">
+$(document).ready(function(){
+	//$('span[title],[style="background-color: red"]').css("border", "5px solid blue");
+	//$('div[title!="div1"]').css("border", "5px solid red")
+	//$('div:not([title="div1"])').css("border", "5px solid blue")
+	//$('div[title*="div"]').css("border", "5px solid red")//contains attribute value example
+	//$('[title|="div"]').css("border", "5px solid red")//attribute value start with value with appended (-) example, div-1
+	//$('[title^="div"]').css("border", "5px solid red")//attribute value start with value with example, div
+	$('[title$="Heading"]').css("border", "5px solid red")//attribute value end with value with example, Heading
+}) ; 
+</script>
+	<div title="div-1">Div1</div>
+	<br>
+	<br>
+	<br>
+	<div title="div2">Div2</div>
+	<br>
+	<br>
+	<br>
+
+	<p title="ptitle">P Title text goes here</p>
+	<br>
+	<br>
+
+	<span title="div1"> Span Text goes here</span>
+
+	<span title="span1Heading"> span1Heading Span Text goes here</span>
+	<span title="span2Heading"> span2Heading Span Text goes here</span>
+	<br>
+	<br>
+	<span> Span Text goes here without attribute</span>
+	<br>
+	<br>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.js"></script>
+<script>
+  window.jQuery || document.write("<script  src='jquery-2.1.4.js'><\/script>")
+</script>
+</head>
+<body>
+<style>
+.focusme{
+background-color: blue;
+border: 2px;
+}
+
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('input[type="text"]').each(function(){
+			$(this).text();
+	});
+
+//each for Jquery elements.
+//$. each for javascript elements.	
+	var josnExample= {"roshan":{"name":"roshan", "Job":"Software Engg"},"Gauri":{"name":"Gauri", "Job":"QA Engg"}};
+	var jsonstring=JSON.stringify(josnExample);
+	var jsonArray=JSON.parse(jsonstring);
+	var empnames="";
+	 $.each(jsonArray,function(i, item){
+		empnames+=item.name+", ";
+	}); 
+	
+}) ; 
+</script>
+Input : <input type="text" value="Cick Here"/><br>
+Input : <input type="text" value="Cick Here"/><br>
+Input : <input type="text" value="Cick Here"/><br>
+Input : <input type="text" value="Cick Here"/><br>
+Input : <input type="text" value="Cick Here"/><br>
+Input : <input type="text" value="Cick Here"/><br>
+Input : <input type="text" value="Cick Here"/><br>
+Input : <input type="text" value="Cick Here"/><br>
+Input : <input type="text" value="Cick Here"/><br>
+Input : <input type="text" value="Cick Here"/><br>
+Input : <input type="text" value="Cick Here"/><br>
+	
+	
+<div>Status</div>	
+</body>
+</html>
